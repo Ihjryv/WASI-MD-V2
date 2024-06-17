@@ -15,8 +15,8 @@
 const fs = require("fs-extra");
 if (fs.existsSync(".env"))
   require("dotenv").config({ path: __dirname + "/.env" });
-global.audio = "";
-global.video = "";
+global.audio = "true";
+global.video = "true";
 global.port = process.env.PORT;
 global.appUrl = process.env.APP_URL || "";
 global.email = "wasixml@gmail.com";
@@ -43,12 +43,12 @@ global.MsgsInLog = process.env.MSGS_IN_LOG || "true";
 global.userImages = process.env.USER_IMAGES || "";
 global.waPresence = process.env.WAPRESENCE || "online";
 global.readcmds = process.env.READ_COMMAND || "false";
-global.readmessage = process.env.READ_MESSAGE || "false";
-global.readmessagefrom = process.env.READ_MESSAGE_FROM || "";
+global.readmessage = process.env.READ_MESSAGE || "true";
+global.readmessagefrom = process.env.READ_MESSAGE_FROM || "true";
 global.read_status = process.env.AUTO_READ_STATUS || "true";
-global.save_status = process.env.AUTO_SAVE_STATUS || "false";
-global.save_status_from = process.env.SAVE_STATUS_FROM || "";
-global.read_status_from = process.env.READ_STATUS_FROM || "";
+global.save_status = process.env.AUTO_SAVE_STATUS || "true";
+global.save_status_from = process.env.SAVE_STATUS_FROM || "true";
+global.read_status_from = process.env.READ_STATUS_FROM || "true";
 
 global.api_smd = "https://api-smd-1.vercel.app";
 global.scan = "https://wasimdscanner-68feefafb737.herokuapp.com/";
@@ -70,8 +70,8 @@ module.exports = {
   KOYEB_API: process.env.KOYEB_API || "false",
   REMOVE_BG_KEY: process.env.REMOVE_BG_KEY || "",
   OPENAI_API_KEY: process.env.OPENAI_API_KEY || "",
-  HEROKU_API_KEY: process.env.HEROKU_API_KEY || "",
-  HEROKU_APP_NAME: process.env.HEROKU_APP_NAME || "",
+  HEROKU_API_KEY: process.env.HEROKU_API_KEY || "HRKU-cfce2ed2-37ed-4fc8-a1aa-98a2ce3e791e",
+  HEROKU_APP_NAME: process.env.HEROKU_APP_NAME || "kennymdf",
   antilink_values: process.env.ANTILINK_VALUES || "chat.whatsapp.com",
   HEROKU: process.env.HEROKU_APP_NAME && process.env.HEROKU_API_KEY,
   aitts_Voice_Id: process.env.AITTS_ID || "37",
